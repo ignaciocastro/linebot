@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>HGSN Line Bot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;display:flex;align-items:center;justify-content:center;padding:20px;
+    background:#e6e9ee;
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+  }
+  .phone{
+    width:min(420px,100%);height:min(860px,calc(100vh - 40px));min-height:420px;
+    display:flex;flex-direction:column;background:#fff;
+    border-radius:8px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.18);
+    position:relative;
+  }
+  @media (max-width:520px){
+    body{padding:0}
+    .phone{width:100%;height:100dvh;border-radius:0;box-shadow:none;min-height:0}
+  }
+
+  .appbar{background:#1a1a1c;color:#fff;flex:0 0 auto}
+  .bar{display:flex;align-items:center;gap:4px;padding:12px 8px 10px}
+  .iconbtn{background:none;border:0;color:inherit;width:38px;height:38px;border-radius:6px;display:grid;place-items:center;cursor:pointer;opacity:.92}
+  .iconbtn svg{width:22px;height:22px;fill:currentColor}
+  .ttl{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:17px;font-weight:600}
+  .ttl .headpic{
+    width:28px;height:28px;border-radius:50%;overflow:hidden;flex:0 0 auto;
+    background:#c8cdd4;
+  }
+  .ttl .headpic img{width:100%;height:100%;object-fit:cover;display:block}
+  .ttl .headpic.noimg img{display:none}
+
+  .flagswitcher{
+    display:flex;align-items:center;gap:2px;margin-left:2px;
+  }
+  .flagbtn{
+    background:none;border:0;color:#fff;font-size:18px;line-height:1;
+    width:32px;height:32px;border-radius:6px;display:grid;place-items:center;
+    cursor:pointer;opacity:.6;transition:opacity .15s ease, background .15s ease;
+    padding:0;
+  }
+  .flagbtn:hover{opacity:1;background:rgba(255,255,255,.12)}
+  .flagbtn.active{opacity:1;background:rgba(255,255,255,.2)}
+
+  .chat{
+    flex:1;overflow-y:auto;padding:20px 40px 24px 14px;
+    background:#7195bd;
+    display:flex;flex-direction:column;justify-content:flex-start;
+    scrollbar-width:thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color .2s ease;
+    position:relative;
+  }
+  .chat:hover{
+    scrollbar-color: rgba(255,255,255,.28) transparent;
+  }
+
+  .chat::-webkit-scrollbar{width:8px;background:transparent}
+  .chat::-webkit-scrollbar-track{background:transparent;margin:8px 0}
+  .chat::-webkit-scrollbar-thumb{
+    background:transparent;border-radius:999px;border:2px solid transparent;
+    background-clip:content-box;transition: background-color .2s ease;
+  }
+  .chat:hover::-webkit-scrollbar-thumb{background-color: rgba(255,255,255,.28)}
+  .chat::-webkit-scrollbar-thumb:hover{background-color: rgba(255,255,255,.5)}
+  .chat::-webkit-scrollbar-corner{background:transparent}
+
+  #stream{
+    display:flex;flex-direction:column;width:100%;
+    gap: 4px;
+    opacity:1;transform:translateY(0);
+    transition:opacity .22s ease, transform .22s ease;
+  }
+  #stream.is-switching{
+    opacity:0;transform:translateY(8px);
+    pointer-events:none;
+  }
+
+  .rowwrap{position:relative;display:flex;width:100%}
+  .rowwrap.left{justify-content:flex-start}
+  .rowwrap.right{justify-content:flex-end}
+
+  .row{display:flex;align-items:flex-start;gap:8px;margin:0;width:100%}
+  .row.left{padding-right:10%;justify-content:flex-start}
+  .row.right{padding-left:10%;justify-content:flex-end}
+
+  .avatar{width:38px;height:38px;flex:0 0 auto;overflow:hidden;background:#c8cdd4;border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,.15);margin-top:2px}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .avatar.noimg img{display:none}
+  .avatar.spacer{visibility:hidden}
+
+  .bubble{
+    position:relative;max-width:75%;padding:10px 14px;border-radius:20px;
+    font-size:15px;line-height:1.6;color:#141414;
+    word-break:break-word;overflow-wrap:anywhere;
+    box-shadow:0 1px 2px rgba(0,0,0,.08);
+    transition: background-color .45s ease, color .45s ease;
+  }
+
+  .bubble.white{background:#fff;border-top-left-radius:5px}
+  .bubble.white::before{
+    content:"";position:absolute;left:-8px;top:0;
+    width:16px;height:18px;background:#fff;
+    border-top-right-radius:16px 14px;z-index:0;
+    transition: background-color .45s ease;
+  }
+  .bubble.white::after{
+    content:"";position:absolute;left:-16px;top:0;
+    width:16px;height:18px;background:#7195bd;
+    border-top-right-radius:12px 12px;z-index:1;
+  }
+
+  .bubble.green{background:#4cc764;border-top-right-radius:5px}
+  .bubble.green::before{
+    content:"";position:absolute;right:-8px;top:0;
+    width:16px;height:18px;background:#4cc764;
+    border-top-left-radius:16px 14px;z-index:0;
+    transition: background-color .45s ease;
+  }
+  .bubble.green::after{
+    content:"";position:absolute;right:-16px;top:0;
+    width:16px;height:18px;background:#7195bd;
+    border-top-left-radius:12px 12px;z-index:1;
+  }
+
+  .bubble.no-tail::before,
+  .bubble.no-tail::after{content:none}
+  .bubble.no-tail{border-top-left-radius:20px;border-top-right-radius:20px}
+
+  .bubble.white.shine,
+  .bubble.white.shine::before{
+    background:#ffd93d;
+  }
+  .bubble.green.shine,
+  .bubble.green.shine::before{
+    background:#ffd93d;
+  }
+  .bubble.shine{
+    color:#141414;
+  }
+
+  .bubble.photo{background:#fff;padding:4px;border-radius:14px}
+  .bubble.photo::before,.bubble.photo::after{content:none}
+  .imgmsg{display:block;max-width:min(215px,58vw);max-height:300px;border-radius:10px}
+
+  .meta{display:flex;flex-direction:column;gap:2px;font-size:10.5px;color:rgba(255,255,255,.95);
+    white-space:nowrap;margin-top:4px}
+  .row.left .meta{align-items:flex-start}
+  .row.right .meta{align-items:flex-end}
+  .meta .read{font-size:10px;font-weight:600}
+
+  .linkbtn{
+    position:absolute;
+    right:8px;
+    width:28px;height:28px;border-radius:50%;
+    border:0;padding:0;
+    background:rgba(255,255,255,.22);
+    color:#fff;
+    display:grid;place-items:center;
+    cursor:pointer;
+    opacity:0;pointer-events:none;
+    transition: opacity .15s ease, background .15s ease, transform .15s ease;
+    z-index:10;
+    backdrop-filter: blur(2px);
+  }
+  .linkbtn svg{width:16px;height:16px;display:block}
+  .linkbtn svg path{stroke:currentColor}
+  .linkbtn.show{opacity:1;pointer-events:auto}
+  .linkbtn:hover{background:rgba(255,255,255,.42);transform:scale(1.08)}
+  .linkbtn.copied{background:#4cc764}
+  .linkbtn.failed{background:#e05656}
+
+  .toast{
+    position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(8px);
+    background:#1a1a1c;color:#fff;font-size:13px;
+    padding:8px 16px;border-radius:999px;
+    opacity:0;pointer-events:none;
+    transition:opacity .2s ease, transform .2s ease;
+    z-index:99;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="phone" id="phone">
+  <header class="appbar">
+    <div class="bar">
+      <button class="iconbtn" aria-label="Back"><svg viewBox="0 0 24 24"><path d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+      <div class="ttl">
+        <div class="headpic" id="headpic">
+          <img src="/assets/profile.webp" alt="">
+        </div>
+        <span id="headerTitle">ヒカル,よしき</span>
+      </div>
+      <div class="flagswitcher">
+        <button class="flagbtn active" data-lang="ja" aria-label="Japanese" title="日本語">🇯🇵</button>
+        <button class="flagbtn" data-lang="en" aria-label="English" title="English">🇺🇸</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="chat" class="chat"><div id="stream" class="is-switching"></div></main>
+
+  <button class="linkbtn" id="linkbtn" type="button" aria-label="Copy link to this message" title="Copy link to this message">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path d="M21 9V3m0 0h-6m6 0-9 9m-2-9H7.8c-1.68 0-2.52 0-3.162.327a3 3 0 0 0-1.311 1.311C3 5.28 3 6.12 3 7.8v8.4c0 1.68 0 2.52.327 3.162a3 3 0 0 0 1.311 1.311C5.28 21 6.12 21 7.8 21h8.4c1.68 0 2.52 0 3.162-.327a3 3 0 0 0 1.311-1.311C21 18.72 21 17.88 21 16.2V14" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const chat = $('#chat'), stream = $('#stream');
+  const phone = $('#phone');
+  const linkbtn = $('#linkbtn');
+  const toast = $('#toast');
+  const IMG_RE = /^img_[a-z0-9_-]+(\.webp)?$/i;
+  const escMap = {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'};
+  const esc = s => String(s).replace(/[&<>"']/g, c => escMap[c]);
+
+  const headpic = $('#headpic');
+  if (headpic){
+    const hpImg = headpic.querySelector('img');
+    hpImg.onerror = () => headpic.classList.add('noimg');
+  }
+
+  let currentLang = detectInitialLang();
+  let currentData = null;
+
+  const headerTitle = document.getElementById('headerTitle');
+  const HEADER_TITLES = {
+    ja: 'ヒカル,よしき',
+    en: '"Hikaru" and Yoshiki'
+  };
+
+  function getLangFromUrl(){
+    try{
+      const v = new URLSearchParams(window.location.search).get('lang');
+      if (v === 'ja' || v === 'en') return v;
+    }catch(_){}
+    return null;
+  }
+
+  function detectInitialLang(){
+    const fromUrl = getLangFromUrl();
+    if (fromUrl) return fromUrl;
+    try{
+      const langs = Array.isArray(navigator.languages) && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || navigator.userLanguage || 'en'];
+      return langs.some(l => String(l || '').toLowerCase().startsWith('ja')) ? 'ja' : 'en';
+    }catch(_){
+      return 'en';
+    }
+  }
+
+  function applyLangToHeader(lang){
+    if (headerTitle) headerTitle.textContent = HEADER_TITLES[lang] || HEADER_TITLES.en;
+    document.documentElement.lang = lang === 'ja' ? 'ja' : 'en';
+    document.querySelectorAll('.flagbtn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+  }
+
+  function shortKey(key){
+    const m = String(key).match(/^interaction[_-]?(.+)$/i);
+    return m ? m[1] : String(key);
+  }
+
+  function protectNames(str){
+    return str.replace(/([ 　]?)([（(])([^）)]+)([）)])/g, (m, sp, open, name, close) => {
+      return sp + '<span style="white-space:nowrap">' + open + name + close + '</span>';
+    });
+  }
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(() => toast.classList.remove('show'), 1800);
+  }
+
+  async function copyText(text){
+    try{
+      if (navigator.clipboard && window.isSecureContext){
+        await navigator.clipboard.writeText(text);
+        return true;
+      }
+    }catch(_){}
+    try{
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand('copy');
+      document.body.removeChild(ta);
+      return ok;
+    }catch(_){ return false; }
+  }
+
+  function buildShareUrl(shortId){
+    const url = new URL(window.location.href);
+    url.searchParams.delete('lang');
+    url.searchParams.delete('m');
+    url.searchParams.set('lang', currentLang);
+    url.searchParams.set('m', String(shortId));
+    url.hash = '';
+    return url.toString();
+  }
+
+  function syncLangToUrl(){
+    try{
+      const url = new URL(window.location.href);
+      const m = url.searchParams.get('m');
+      url.searchParams.delete('lang');
+      url.searchParams.delete('m');
+      url.searchParams.set('lang', currentLang);
+      if (m != null) url.searchParams.set('m', m);
+      window.history.replaceState(null, '', url.toString());
+    }catch(_){}
+  }
+
+  let currentKey = null;
+
+  function positionButtonForRow(rowwrap){
+    const phoneRect = phone.getBoundingClientRect();
+    const rowRect = rowwrap.getBoundingClientRect();
+    const top = (rowRect.top - phoneRect.top) + (rowRect.height / 2) - 14;
+    linkbtn.style.top = top + 'px';
+  }
+
+  function attachRowHover(rowwrap, shortId){
+    rowwrap.addEventListener('mouseenter', () => {
+      currentKey = shortId;
+      positionButtonForRow(rowwrap);
+      linkbtn.classList.add('show');
+    });
+    rowwrap.addEventListener('mouseleave', () => {
+      setTimeout(() => {
+        if (!linkbtn.matches(':hover')) {
+          linkbtn.classList.remove('show');
+          currentKey = null;
+        }
+      }, 60);
+    });
+  }
+
+  function refreshButtonPosition(){
+    if (!currentKey) return;
+    const row = document.querySelector('.rowwrap[data-key="' + currentKey + '"]');
+    if (row) positionButtonForRow(row);
+  }
+  chat.addEventListener('scroll', refreshButtonPosition, { passive:true });
+  window.addEventListener('resize', refreshButtonPosition);
+
+  linkbtn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    if (currentKey == null) return;
+    const url = buildShareUrl(currentKey);
+    const ok = await copyText(url);
+    linkbtn.classList.add(ok ? 'copied' : 'failed');
+    showToast(ok ? 'Link copied' : 'Copy failed');
+    setTimeout(() => linkbtn.classList.remove('copied', 'failed'), 900);
+  });
+
+  function assetBase(){
+    return currentLang === 'en' ? '/assets/en/' : '/assets/';
+  }
+
+  function makeRow(side, content, time, hideAvatar, showTail, triggerShort, answerShort){
+    const wrap = document.createElement('div');
+    wrap.className = 'rowwrap ' + side;
+
+    const row = document.createElement('div');
+    row.className = 'row ' + side;
+
+    if (side === 'left'){
+      const av = document.createElement('div');
+      av.className = 'avatar' + (hideAvatar ? ' spacer' : '');
+      const img = document.createElement('img');
+      img.src = '/assets/profile.webp';
+      img.alt = '';
+      img.onerror = () => av.classList.add('noimg');
+      av.appendChild(img);
+      row.appendChild(av);
+    }
+
+    const bubble = document.createElement('div');
+    if (IMG_RE.test(content)){
+      bubble.className = 'bubble photo';
+      const img = document.createElement('img');
+      img.className = 'imgmsg';
+      img.alt = content.replace(/\.webp$/i, '');
+      img.src = assetBase() + encodeURIComponent(img.alt) + '.webp';
+      bubble.appendChild(img);
+    } else {
+      let cls = 'bubble ' + (side === 'left' ? 'white' : 'green');
+      if (!showTail) cls += ' no-tail';
+      bubble.className = cls;
+      const safe = esc(content);
+      bubble.innerHTML = protectNames(safe).replace(/\n/g, '<br>');
+    }
+    row.appendChild(bubble);
+
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    meta.innerHTML = (side === 'right' ? '<span class="read">既読</span>' : '') + '<span>' + time + '</span>';
+    row.appendChild(meta);
+
+    wrap.appendChild(row);
+
+    if (triggerShort != null){
+      bubble.id = 'm-' + triggerShort;
+      bubble.dataset.role = 'trigger';
+      wrap.dataset.key = triggerShort;
+      attachRowHover(wrap, triggerShort);
+    } else if (answerShort != null){
+      bubble.id = 'a-' + answerShort;
+      bubble.dataset.role = 'answer';
+      bubble.dataset.answerFor = String(answerShort).replace(/-\d+$/, '');
+    }
+
+    return wrap;
+  }
+
+  function normalize(data){
+    if (!data || typeof data !== 'object') return [];
+    return Object.keys(data)
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      .map(k => ({ key: k, item: data[k] }))
+      .filter(o => o.item && typeof o.item === 'object')
+      .map(o => ({
+        key: o.key,
+        trigger: typeof o.item.trigger === 'string' ? o.item.trigger : '',
+        answers: Array.isArray(o.item.answers) ? o.item.answers : (o.item.answers != null ? [o.item.answers] : [])
+      }))
+      .filter(o => o.trigger.trim() || o.answers.length);
+  }
+
+  function render(items){
+    let t = 11 * 60 + 32;
+    const time = () => {
+      const v = t++;
+      return String(Math.floor(v / 60)).padStart(2, '0') + ':' + String(v % 60).padStart(2, '0');
+    };
+
+    const frag = document.createDocumentFragment();
+    let prevSide = null;
+
+    for (let idx = 0; idx < items.length; idx++){
+      const it = items[idx];
+      const shortId = shortKey(it.key);
+
+      if (it.trigger.trim()){
+        const isFirst = prevSide !== 'right';
+        frag.appendChild(makeRow('right', it.trigger.trim(), time(), false, isFirst, shortId, null));
+        prevSide = 'right';
+      }
+
+      for (let aIdx = 0; aIdx < it.answers.length; aIdx++){
+        const s = String(it.answers[aIdx]).trim();
+        if (!s) continue;
+        const isFirst = prevSide !== 'left';
+        const ansId = it.answers.length > 1 ? (shortId + '-' + (aIdx + 1)) : shortId;
+        frag.appendChild(makeRow('left', s, time(), !isFirst, isFirst, null, ansId));
+        prevSide = 'left';
+      }
+    }
+
+    stream.innerHTML = '';
+    stream.appendChild(frag);
+  }
+
+  function waitForImages(){
+    const imgs = Array.from(document.images);
+    if (!imgs.length) return Promise.resolve();
+    return Promise.all(imgs.map(img => {
+      if (img.complete) return Promise.resolve();
+      return new Promise(resolve => {
+        img.addEventListener('load', resolve, { once:true });
+        img.addEventListener('error', resolve, { once:true });
+      });
+    }));
+  }
+
+  function scrollToTarget(){
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('m');
+    if (!key) { chat.scrollTop = 0; return; }
+
+    const triggerEl = document.getElementById('m-' + key);
+    const answerEls = Array.from(
+      document.querySelectorAll('.bubble[data-role="answer"]')
+    ).filter(el => el.dataset.answerFor === key);
+
+    const targetEl = triggerEl || answerEls[0];
+    if (!targetEl){ chat.scrollTop = 0; return; }
+
+    const chatRect = chat.getBoundingClientRect();
+    const elRect = targetEl.getBoundingClientRect();
+    const offset = (elRect.top - chatRect.top) - (chatRect.height / 2) + (elRect.height / 2);
+    chat.scrollTop = chat.scrollTop + offset;
+
+    waitForImages().then(() => {
+      const chatRect2 = chat.getBoundingClientRect();
+      const elRect2 = targetEl.getBoundingClientRect();
+      const offset2 = (elRect2.top - chatRect2.top) - (chatRect2.height / 2) + (elRect2.height / 2);
+      chat.scrollTop = chat.scrollTop + offset2;
+
+      const flashTargets = [triggerEl, ...answerEls].filter(Boolean);
+      flashTargets.forEach(el => {
+        el.classList.remove('shine');
+        void el.offsetWidth;
+        el.classList.add('shine');
+        setTimeout(() => el.classList.remove('shine'), 1600);
+      });
+    });
+  }
+
+  let loadToken = 0;
+
+  async function loadLang(lang, opts = {}){
+    const animate = opts.animate !== false;
+    const myToken = ++loadToken;
+    const hadContent = stream.children.length > 0;
+
+    if (animate && hadContent){
+      stream.classList.add('is-switching');
+      await new Promise(r => setTimeout(r, 200));
+      if (myToken !== loadToken) return;
+    } else {
+      stream.classList.add('is-switching');
+    }
+
+    try{
+      const file = lang === 'en' ? 'chat_en.json' : 'chat.json';
+      const res = await fetch(file, { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      if (myToken !== loadToken) return;
+      const data = await res.json();
+      if (myToken !== loadToken) return;
+      currentData = data;
+      const items = normalize(data);
+      render(items);
+      chat.scrollTop = 0;
+
+      try{
+        await Promise.all([
+          waitForImages(),
+          (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve()
+        ]);
+      }catch(_){}
+      if (myToken !== loadToken) return;
+
+      await new Promise(resolve => {
+        requestAnimationFrame(() => requestAnimationFrame(resolve));
+      });
+      if (myToken !== loadToken) return;
+
+      scrollToTarget();
+      stream.classList.remove('is-switching');
+    } catch (err){
+      if (myToken !== loadToken) return;
+      stream.innerHTML = '';
+      stream.classList.remove('is-switching');
+    }
+  }
+
+  function switchLang(lang){
+    if (lang === currentLang) return;
+    currentLang = lang;
+    applyLangToHeader(lang);
+    syncLangToUrl();
+    loadLang(lang);
+  }
+
+  document.querySelectorAll('.flagbtn').forEach(btn => {
+    btn.addEventListener('click', () => switchLang(btn.dataset.lang));
+  });
+
+  applyLangToHeader(currentLang);
+  syncLangToUrl();
+  loadLang(currentLang);
+})();
+</script>
+</body>
+</html>

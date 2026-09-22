@@ -1,0 +1,1298 @@
+{
+  "interaction_001": {
+    "trigger": "",
+    "answers": [
+      "Thanks for adding us. If you say something to us, \"Hikaru\" and I will answer. (Yoshiki)",
+      "Only as much as I can answer! (\"Hikaru\")"
+    ]
+  },
+  "interaction_002": {
+    "trigger": "Nice to meet you",
+    "answers": [
+      "Oh~, nice to meet ya (\"Hikaru\")",
+      "Nice to meet you. (Yoshiki)"
+    ]
+  },
+  "interaction_003": {
+    "trigger": "Good morning",
+    "answers": [
+      "Morning! (\"Hikaru\")"
+    ]
+  },
+  "interaction_004": {
+    "trigger": "Hello",
+    "answers": [
+      "Oh~ (\"Hikaru\")",
+      "Hello. Hey, learn how to greet people properly... (Yoshiki)"
+    ]
+  },
+  "interaction_005": {
+    "trigger": "Good evening",
+    "answers": [
+      "Good evening! (\"Hikaru\")",
+      "Good evening. It's startin' to get cool out, ain't it? (Yoshiki)"
+    ]
+  },
+  "interaction_006": {
+    "trigger": "Goodnight",
+    "answers": [
+      "Going to sleep already? (\"Hikaru\")",
+      "Goodnight. I want to sleep too (Yoshiki)"
+    ]
+  },
+  "interaction_007": {
+    "trigger": "Let's hang out",
+    "answers": [
+      "Sure, wanna play games at Yoshiki's place? (\"Hikaru\")",
+      "I don't want to because you'll delete my save data... (Yoshiki)"
+    ]
+  },
+  "interaction_008": {
+    "trigger": "Died",
+    "answers": [
+      "I'm alive~ for the most part. (\"Hikaru\")"
+    ]
+  },
+  "interaction_009": {
+    "trigger": "Goodbye",
+    "answers": [
+      "Oh, see ya~ (\"Hikaru\")",
+      "Yeah (Yoshiki)"
+    ]
+  },
+  "interaction_010": {
+    "trigger": "It's cold",
+    "answers": [
+      "I can't stand the AC, it's too cold for me. I'm more of a fan person. (\"Hikaru\")",
+      "I absolutely can't handle it without air conditioning. (Yoshiki)"
+    ]
+  },
+  "interaction_011": {
+    "trigger": "It's hot",
+    "answers": [
+      "Being hot is fun! (\"Hikaru\")",
+      "I hate the heat... (Yoshiki)"
+    ]
+  },
+  "interaction_012": {
+    "trigger": "I love you",
+    "answers": [
+      "Eh... why... (Yoshiki)"
+    ]
+  },
+  "interaction_013": {
+    "trigger": "I love you so much",
+    "answers": [
+      "Huh? ...What...? Uh, hi... (Yoshiki)"
+    ]
+  },
+  "interaction_014": {
+    "trigger": "Go out with me",
+    "answers": [
+      "Huh? (\"Hikaru\")",
+      "What...! I-I can't... (Yoshiki)"
+    ]
+  },
+  "interaction_015": {
+    "trigger": "How cute",
+    "answers": [
+      "Right? Yoshiki is so cute, isn't he? Haha ( \"Hikaru\" )",
+      "...I'm not happy about this... (Yoshiki)"
+    ]
+  },
+  "interaction_016": {
+    "trigger": "Cute",
+    "answers": [
+      "...",
+      "...",
+      "img_016"
+    ]
+  },
+  "interaction_017": {
+    "trigger": "Cool",
+    "answers": [
+      "Uh... not really... (Yoshiki)",
+      "True that~ I'm a given, but Yoshiki is pretty cool too! lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_018": {
+    "trigger": "This is fun",
+    "answers": [
+      "I'm having fun every day too! (\"Hikaru\")",
+      "For real. (Yoshiki)"
+    ]
+  },
+  "interaction_019": {
+    "trigger": "I'm sad",
+    "answers": [
+      "Are you okay? (Yoshiki)"
+    ]
+  },
+  "interaction_020": {
+    "trigger": "Gross",
+    "answers": [
+      "...Let's go to the nurse's office. (Yoshiki)"
+    ]
+  },
+  "interaction_021": {
+    "trigger": "Scary",
+    "answers": [
+      "Where? (\"Hikaru\")"
+    ]
+  },
+  "interaction_022": {
+    "trigger": "It hurts",
+    "answers": [
+      "Hmm, what does it feel like to be in pain? (\"Hikaru\")"
+    ]
+  },
+  "interaction_023": {
+    "trigger": "I'm sleepy",
+    "answers": [
+      "Can I sleep in your bed, Yoshiki? (\"Hikaru\")",
+      "I don't really mind, but... you toss and turn in your sleep, so I'm not feeling it. (Yoshiki)"
+    ]
+  },
+  "interaction_024": {
+    "trigger": "Amazing",
+    "answers": [
+      "Geez...",
+      "!!",
+      "img_024"
+    ]
+  },
+  "interaction_025": {
+    "trigger": "It hurts",
+    "answers": [
+      "Heh, how pitiful. (\"Hikaru\")"
+    ]
+  },
+  "interaction_026": {
+    "trigger": "Boring",
+    "answers": [
+      "I dunno~ (\"Hikaru\")",
+      "Sorry (Yoshiki)"
+    ]
+  },
+  "interaction_027": {
+    "trigger": "I feel like crying",
+    "answers": [
+      "Here, take a handkerchief... (Yoshiki)"
+    ]
+  },
+  "interaction_028": {
+    "trigger": "Tears",
+    "answers": [
+      "How's it going?",
+      "What's that?",
+      "img_028"
+    ]
+  },
+  "interaction_029": {
+    "trigger": "Kind",
+    "answers": [
+      "...It's not that you're being kind. (Yoshiki)"
+    ]
+  },
+  "interaction_030": {
+    "trigger": "I'm happy",
+    "answers": [
+      "That's great. I'm glad for you. (Yoshiki)"
+    ]
+  },
+  "interaction_031": {
+    "trigger": "That's harsh",
+    "answers": [
+      "That's not true (\"Hikaru\")"
+    ]
+  },
+  "interaction_032": {
+    "trigger": "I'm lonely",
+    "answers": [
+      "Why? Did something sad happen? (\"Hikaru\")"
+    ]
+  },
+  "interaction_033": {
+    "trigger": "Interesting",
+    "answers": [
+      "Funny face!",
+      "How is it?",
+      "img_033"
+    ]
+  },
+  "interaction_034": {
+    "trigger": "Delicious",
+    "answers": [
+      "Tastes great!",
+      "--!!",
+      "img_034"
+    ]
+  },
+  "interaction_035": {
+    "trigger": "What a pain",
+    "answers": [
+      "I get that~ For me, brushing my teeth is the biggest pain! (\"Hikaru\")"
+    ]
+  },
+  "interaction_036": {
+    "trigger": "Hurry up",
+    "answers": [
+      "In the Sekasan... (Yoshiki)"
+    ]
+  },
+  "interaction_037": {
+    "trigger": "I want to see you",
+    "answers": [
+      "If you come as far as Kubitachi, you'll be able to meet them. (Yoshiki)"
+    ]
+  },
+  "interaction_038": {
+    "trigger": "I want to talk",
+    "answers": [
+      "Ugh, what a pain lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_039": {
+    "trigger": "Did I scare you?",
+    "answers": [
+      "Damn it... (Yoshiki)"
+    ]
+  },
+  "interaction_040": {
+    "trigger": "Why?",
+    "answers": [
+      "What is? (\"Hikaru\")"
+    ]
+  },
+  "interaction_041": {
+    "trigger": "Tell me",
+    "answers": [
+      "It's a secreeeet~",
+      "How is it?",
+      "img_041"
+    ]
+  },
+  "interaction_042": {
+    "trigger": "Please",
+    "answers": [
+      "A favor? Sure. I'll do anything for you. (\"Hikaru\")"
+    ]
+  },
+  "interaction_043": {
+    "trigger": "I see",
+    "answers": [
+      "What is it? (Yoshiki)"
+    ]
+  },
+  "interaction_044": {
+    "trigger": "Are you mad?",
+    "answers": [
+      "I wasn't trying to say that... (Yoshiki)"
+    ]
+  },
+  "interaction_045": {
+    "trigger": "You get it, right?",
+    "answers": [
+      "I know (\"Hikaru\")"
+    ]
+  },
+  "interaction_046": {
+    "trigger": "I don't want to",
+    "answers": [
+      "Oh, really~ (\"Hikaru\")"
+    ]
+  },
+  "interaction_047": {
+    "trigger": "How's it going?",
+    "answers": [
+      "I'm doing great! Want me to show you how fast I can run? (\"Hikaru\")",
+      "I can't believe you're out in this heat... whoa (Yoshiki)"
+    ]
+  },
+  "interaction_048": {
+    "trigger": "Studying",
+    "answers": [
+      "Yoshiki, you're so good at studying. I've got the motivation, but I still keep getting failing grades (\"Hikaru\")",
+      "I think it's because even if they have the motivation, they aren't actually studying (Yoshi-san)"
+    ]
+  },
+  "interaction_049": {
+    "trigger": "Photo",
+    "answers": [
+      "What's this? (\"Hikaru\")",
+      "That's a nice photo. (Yoshiki)"
+    ]
+  },
+  "interaction_050": {
+    "trigger": "I want to go home",
+    "answers": [
+      "Let's head home already~ (\"Hikaru\")",
+      "I think sleeping is the best way to go. (Yoshiki)"
+    ]
+  },
+  "interaction_051": {
+    "trigger": "Work",
+    "answers": [
+      "Being a working adult is tough, huh? (\"Hikaru\")",
+      "Seriously... thanks for your hard work. (Yoshiki)"
+    ]
+  },
+  "interaction_052": {
+    "trigger": "Good work",
+    "answers": [
+      "Thanks... good work on your end too. (Yoshiki)"
+    ]
+  },
+  "interaction_053": {
+    "trigger": "Support",
+    "answers": [
+      "Yeah... good luck. I'm rooting for you. (Yoshiki)"
+    ]
+  },
+  "interaction_054": {
+    "trigger": "The best",
+    "answers": [
+      "The best? Huh? Thanks!! (\"Hikaru\")"
+    ]
+  },
+  "interaction_055": {
+    "trigger": "The worst",
+    "answers": [
+      "Huh? You're annoying. (\"Hikaru\")"
+    ]
+  },
+  "interaction_056": {
+    "trigger": "Fake",
+    "answers": [
+      "What?? (\"Hikaru\")"
+    ]
+  },
+  "interaction_057": {
+    "trigger": "Give it back",
+    "answers": [
+      "What? (\"Hikaru\")"
+    ]
+  },
+  "interaction_058": {
+    "trigger": "The real thing",
+    "answers": [
+      "What are you talking about? (\"Hikaru\")"
+    ]
+  },
+  "interaction_059": {
+    "trigger": "Regret",
+    "answers": [
+      "...I get it. I feel that way a lot too. (Yoshiki)"
+    ]
+  },
+  "interaction_060": {
+    "trigger": "Sure",
+    "answers": [
+      "Really? (\"Hikaru\")"
+    ]
+  },
+  "interaction_061": {
+    "trigger": "You",
+    "answers": [
+      "What is it? What do you mean? (\"Hikaru\")"
+    ]
+  },
+  "interaction_062": {
+    "trigger": "Hey",
+    "answers": [
+      "...What? (Yoshiki)"
+    ]
+  },
+  "interaction_063": {
+    "trigger": "Homework",
+    "answers": [
+      "Want me to help? No, I guess it won't do any good unless you do it yourself... Good luck. (Yoshiki)"
+    ]
+  },
+  "interaction_064": {
+    "trigger": "I don't know",
+    "answers": [
+      "I don't know either (Yoshiki)"
+    ]
+  },
+  "interaction_065": {
+    "trigger": "Got it",
+    "answers": [
+      "Oh~ (\"Hikaru\")"
+    ]
+  },
+  "interaction_066": {
+    "trigger": "Yes",
+    "answers": [
+      "Yeah. What is it? (Yoshiki)"
+    ]
+  },
+  "interaction_067": {
+    "trigger": "No",
+    "answers": [
+      "Eh~ (\"Hikaru\")"
+    ]
+  },
+  "interaction_068": {
+    "trigger": "!",
+    "answers": [
+      "Huh? (\"Hikaru\")"
+    ]
+  },
+  "interaction_069": {
+    "trigger": "?",
+    "answers": [
+      "Why?... I don't really know. (Yoshiki)"
+    ]
+  },
+  "interaction_070": {
+    "trigger": "This is fun!",
+    "answers": [
+      "Sounds great! I'm having fun too! (\"Hikaru\")"
+    ]
+  },
+  "interaction_071": {
+    "trigger": "Seriously?",
+    "answers": [
+      "That's right (\"Hikaru\")"
+    ]
+  },
+  "interaction_072": {
+    "trigger": "Hey",
+    "answers": [
+      "What? (Yoshiki)"
+    ]
+  },
+  "interaction_073": {
+    "trigger": "Ah",
+    "answers": [
+      "You just typed that randomly, didn't you! (\"Hikaru\")"
+    ]
+  },
+  "interaction_074": {
+    "trigger": "Bye~~",
+    "answers": [
+      "Yeah~",
+      "~~~",
+      "img_074"
+    ]
+  },
+  "interaction_075": {
+    "trigger": "Congratulations!",
+    "answers": [
+      "Eh, thanks... (Yoshiki)",
+      "You're blushing, you're blushing (\"Hikaru\")"
+    ]
+  },
+  "interaction_076": {
+    "trigger": "I did my best",
+    "answers": [
+      "Sure thing!! You worked so hard! Good job! (\"Hikaru\")"
+    ]
+  },
+  "interaction_077": {
+    "trigger": "I'm glad",
+    "answers": [
+      "I'm glad (Yoshiki)"
+    ]
+  },
+  "interaction_078": {
+    "trigger": "Thank you",
+    "answers": [
+      "Did I do something...? (Yoshiki)"
+    ]
+  },
+  "interaction_079": {
+    "trigger": "Come here",
+    "answers": [
+      "You sure? (\"Hikaru\")"
+    ]
+  },
+  "interaction_080": {
+    "trigger": "No",
+    "answers": [
+      "I see (Yoshiki)"
+    ]
+  },
+  "interaction_081": {
+    "trigger": "Are you listening?",
+    "answers": [
+      "Huh? (\"Hikaru\")"
+    ]
+  },
+  "interaction_082": {
+    "trigger": "Idiot",
+    "answers": [
+      "Huh? So annoying! (\"Hikaru\")",
+      "Hahaha! (Yoshiki)"
+    ]
+  },
+  "interaction_083": {
+    "trigger": "Happy Birthday!",
+    "answers": [
+      "Huh? (It's not even my birthday today...) (Yoshiki)",
+      "Thanks! Since today's my birthday! (\"Hikaru\")"
+    ]
+  },
+  "interaction_084": {
+    "trigger": "Pow",
+    "answers": [
+      "Huh? What do you mean? (\"Hikaru\")",
+      "I don't really get it... sorry. (Yoshiki)"
+    ]
+  },
+  "interaction_085": {
+    "trigger": "Indou",
+    "answers": [
+      "Come to think of it, it's a weird surname, isn't it? I wonder where it comes from. (\"Hikaru\")"
+    ]
+  },
+  "interaction_086": {
+    "trigger": "Tsujinaka",
+    "answers": [
+      "People always forget to write the dots in my last name. (Yoshiki)"
+    ]
+  },
+  "interaction_087": {
+    "trigger": "\"Hikaru\"",
+    "answers": [
+      "What? Did you call me? (\"Hikaru\")"
+    ]
+  },
+  "interaction_088": {
+    "trigger": "Yoshiko",
+    "answers": [
+      "Yeah. What...? (Yoshiki)"
+    ]
+  },
+  "interaction_089": {
+    "trigger": "Kaoru",
+    "answers": [
+      "Kaoru's pretty much like a little sister to me, too~ (\"Hikaru\")"
+    ]
+  },
+  "interaction_090": {
+    "trigger": "\"Hikaru\"",
+    "answers": [
+      "I've come back safe and sound... properly. (Yoshiki)"
+    ]
+  },
+  "interaction_091": {
+    "trigger": "Asako",
+    "answers": [
+      "I've never once won at arm wrestling... By the way, apparently she's secretly popular among the guys. (Yoshiki)"
+    ]
+  },
+  "interaction_092": {
+    "trigger": "Yuuki",
+    "answers": [
+      "Yuuki's been a friend since middle school, so we've known each other for a decent while. The courtesy chocolates they give me for Valentine's are insanely delicious. (Yoshiki)"
+    ]
+  },
+  "interaction_093": {
+    "trigger": "Yuuta",
+    "answers": [
+      "Maki's way louder and more annoying than me, right? lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_094": {
+    "trigger": "Rie Kurebayashi",
+    "answers": [
+      "...When those eyes stare at me, I can't move... (Yoshiki)"
+    ]
+  },
+  "interaction_095": {
+    "trigger": "Matsuura-san",
+    "answers": [
+      "Ah... ah...",
+      "Why's that?",
+      "img_095"
+    ]
+  },
+  "interaction_096": {
+    "trigger": "Tanaka",
+    "answers": [
+      "Who's that? (Yoshiki)"
+    ]
+  },
+  "interaction_097": {
+    "trigger": "Hajime Takeda",
+    "answers": [
+      "It's the landlord. He's got a scary face, so I don't really get close to him... (Yoshiki)"
+    ]
+  },
+  "interaction_098": {
+    "trigger": "Tetsu Mikasa",
+    "answers": [
+      "Old man Mikasa is a Shinto priest. He's always taking care of us. (Yoshiki)"
+    ]
+  },
+  "interaction_099": {
+    "trigger": "Yoshihiko Matsushima",
+    "answers": [
+      "That old guy's always drinking, isn't he... (\"Hikaru\")"
+    ]
+  },
+  "interaction_100": {
+    "trigger": "Harasen",
+    "answers": [
+      "What a tactless teacher (Yoshiki)",
+      "It's not like I'm hated or anything lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_101": {
+    "trigger": "Yasaburo",
+    "answers": [
+      "I don't really like Yasaburo and this place... They keep making snide remarks. (Yoshiki)"
+    ]
+  },
+  "interaction_102": {
+    "trigger": "Dad",
+    "answers": [
+      "I don't... talk to my dad at all... (Yoshiki)"
+    ]
+  },
+  "interaction_103": {
+    "trigger": "Mom",
+    "answers": [
+      "My mom and Yoshiki's mom get along great. They're always having tea together. (\"Hikaru\")"
+    ]
+  },
+  "interaction_104": {
+    "trigger": "Old man",
+    "answers": [
+      "Old man, I know you loved \"Hikaru\". (\"Hikaru\")"
+    ]
+  },
+  "interaction_105": {
+    "trigger": "Big brother",
+    "answers": [
+      "I hate it when you call me that. (Yoshiki)",
+      "Gyahaha! Big brother lol (Yoshiki)"
+    ]
+  },
+  "interaction_106": {
+    "trigger": "Mince-aniki",
+    "answers": [
+      ".....",
+      "SHAAAAAAA",
+      "img_106"
+    ]
+  },
+  "interaction_107": {
+    "trigger": "Nounuki",
+    "answers": [
+      "Muscular-sama? What's that? (\"Hikaru\")"
+    ]
+  },
+  "interaction_109": {
+    "trigger": "The wig yokai",
+    "answers": [
+      "That's bad (\"Hikaru\")"
+    ]
+  },
+  "interaction_110": {
+    "trigger": "Ka-taro",
+    "answers": [
+      "I don't really want to remember... (Yoshiki)"
+    ]
+  },
+  "interaction_111": {
+    "trigger": "Labor cat",
+    "answers": [
+      "Girls really like this cat character, don't they? If I wore a hairpin, would I be popular? (\"Hikaru\")"
+    ]
+  },
+  "interaction_112": {
+    "trigger": "Emil",
+    "answers": [
+      "That's Yoshiki's nickname. (\"Hikaru\")"
+    ]
+  },
+  "interaction_113": {
+    "trigger": "Mokumoku-ren",
+    "answers": [
+      "Who's that? (\"Hikaru\")"
+    ]
+  },
+  "interaction_114": {
+    "trigger": "Shrine",
+    "answers": [
+      "The shrine... I'd like to try going inside eventually. (\"Hikaru\")"
+    ]
+  },
+  "interaction_115": {
+    "trigger": "The countryside",
+    "answers": [
+      "There's really nothing here, and being surrounded by mountains makes it the worst place ever. At least for me. (Yoshiki)"
+    ]
+  },
+  "interaction_116": {
+    "trigger": "Kibogayama",
+    "answers": [
+      "It's the town next to Kubitachi, but it's pretty run-down. (Yoshiki)"
+    ]
+  },
+  "interaction_117": {
+    "trigger": "Kubitachi",
+    "answers": [
+      "It's closed off, dark... a place where there's nothing. (Yoshiki)",
+      "Just for fun! (\"Hikaru\")"
+    ]
+  },
+  "interaction_118": {
+    "trigger": "Ashidori",
+    "answers": [
+      "That's where Maki lives. It's just over Kibogayama. (Yoshiki)"
+    ]
+  },
+  "interaction_119": {
+    "trigger": "Casual Diner America",
+    "answers": [
+      "Let's go to Casual Diner America! (\"Hikaru\")",
+      "That place is pretty tasty, too. (Yoshiki)"
+    ]
+  },
+  "interaction_120": {
+    "trigger": "Mion",
+    "answers": [
+      "To be honest, there aren't really any other places to hang out around here lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_121": {
+    "trigger": "Convenience store",
+    "answers": [
+      "You can only find them in town! I go there with Yoshiki all the time. (\"Hikaru\")"
+    ]
+  },
+  "interaction_122": {
+    "trigger": "Tokyo",
+    "answers": [
+      "If Yoshiki goes to Tokyo, I'm coming along too! (\"Hikaru\")",
+      "What the—, that's annoying (Yoshiki)"
+    ]
+  },
+  "interaction_123": {
+    "trigger": "The city",
+    "answers": [
+      "I just keep thinking... that maybe if I went to the city, things would get a little easier for me. (Yoshiki)"
+    ]
+  },
+  "interaction_124": {
+    "trigger": "Mie",
+    "answers": [
+      "Apparently our dialect is often called fake Osaka-ben... Even though it's not the same as Osaka-ben (Yoshiki)"
+    ]
+  },
+  "interaction_125": {
+    "trigger": "Chicken",
+    "answers": [
+      "... I mean, I normally like you. (Yoshiki)"
+    ]
+  },
+  "interaction_126": {
+    "trigger": "Fried chicken",
+    "answers": [
+      "It's not that I hate it, but when I had it for cooking class and then again for dinner, it felt a bit too heavy on my stomach. (Yoshiki)"
+    ]
+  },
+  "interaction_127": {
+    "trigger": "Minced meat cutlet",
+    "answers": [
+      "*Don*",
+      "!",
+      "img_127_1",
+      "img_127_2"
+    ]
+  },
+  "interaction_128": {
+    "trigger": "Watermelon",
+    "answers": [
+      "Is there anyone who can eat watermelon better than me? (\"Hikaru\")",
+      "No, that way of eating is gross (Yoshiki)"
+    ]
+  },
+  "interaction_129": {
+    "trigger": "Ice cream",
+    "answers": [
+      "For ice cream, Gachigachi-kun takes first place— (\"Hikaru\")",
+      "Yamahisa usually only stocks stuff like Papico, but that's only third place for us. (Yoshiki)"
+    ]
+  },
+  "interaction_130": {
+    "trigger": "Shiitake",
+    "answers": [
+      "\"Hikaru\"'s house is huge. His family's been making a killing with shiitake mushrooms for generations. (Yoshiki)"
+    ]
+  },
+  "interaction_131": {
+    "trigger": "Takoyaki",
+    "answers": [
+      "That was seriously delicious, but it was way too hot ( \"Hikaru\" )"
+    ]
+  },
+  "interaction_132": {
+    "trigger": "What a pain",
+    "answers": [
+      "Tastes like crap (Yoshiki)"
+    ]
+  },
+  "interaction_133": {
+    "trigger": "Shaved ice",
+    "answers": [
+      "It was a total shock that all the syrup flavors taste exactly the same. (\"Hikaru\")"
+    ]
+  },
+  "interaction_134": {
+    "trigger": "Parfait",
+    "answers": [
+      "That lady... she was eating that parfait all by herself after that. (Yoshiki)"
+    ]
+  },
+  "interaction_135": {
+    "trigger": "Cherry tomato",
+    "answers": [
+      "That's fine, since Yoshiki's gonna eat all of it lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_136": {
+    "trigger": "Crab",
+    "answers": [
+      "Man, we really got attacked by freshwater crabs a lot, didn't we? (Yoshiki)"
+    ]
+  },
+  "interaction_137": {
+    "trigger": "Summer",
+    "answers": [
+      "Summer's all about watermelon! (\"Hikaru\")",
+      "All you ever talk about is food. (Yoshiki)"
+    ]
+  },
+  "interaction_138": {
+    "trigger": "Autumn",
+    "answers": [
+      "The leaves change color. The mountains turn kind of red, and the silver grass starts growing. (Yoshiki)",
+      "Heh~ I can't wait. (\"Hikaru\")",
+      "Heh~ I can't wait. (\"Hikaru\")"
+    ]
+  },
+  "interaction_139": {
+    "trigger": "Winter",
+    "answers": [
+      "I hate how cold it gets in winter. It even snows around here... (Yoshiki)",
+      "I was actually really moved the first time I saw snow with my own eyes. (\"Hikaru\")"
+    ]
+  },
+  "interaction_140": {
+    "trigger": "Dream",
+    "answers": [
+      "Leave the village...? (Yoshiki)",
+      "Whoa, I'm gonna be rich enough to wipe my ass with ten-thousand yen bills (\"Hikaru\")"
+    ]
+  },
+  "interaction_141": {
+    "trigger": "Hobbies",
+    "answers": [
+      "Uh... watching YouTube, reading manga... I used to make insect specimens and stuff back in the day. (Yoshiki)",
+      "Reading manga... or eating? (\"Hikaru\")"
+    ]
+  },
+  "interaction_142": {
+    "trigger": "\"Hikaru\" has been texting me 24/7, both now and back then... (Yoshiki)",
+    "answers": [
+      "Huh? Is there something wrong with that? I'm bored, so it's fine, right? (\"Hikaru\")",
+      "Huh? Is there something wrong with that? I'm bored, so it's fine, right? (\"Hikaru\")"
+    ]
+  },
+  "interaction_143": {
+    "trigger": "Twitter",
+    "answers": [
+      "Yoshiki's socials are literally nothing but RTs of cat pictures lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_144": {
+    "trigger": "Master, master!",
+    "answers": [
+      "Master, Master, I've read quite a bit of it. But it's 120 volumes total (unfinished), so... (\"Hikaru\")"
+    ]
+  },
+  "interaction_145": {
+    "trigger": "Anime",
+    "answers": [
+      "The third season of the anime remake of Master Master has started, so I'm watching it on a streaming service. (Yoshiki)"
+    ]
+  },
+  "interaction_146": {
+    "trigger": "Summer Festival",
+    "answers": [
+      "The summer festival was so much fun! Are you gonna wear a yukata, Yoshi? (\"Hikaru\")",
+      "It's a pain, I'm not wearing it. (Yoshiki)",
+      "I'd like to try wearing it at least once, though~ (\"Hikaru\")"
+    ]
+  },
+  "interaction_147": {
+    "trigger": "Sports Day",
+    "answers": [
+      "I'm pretty sure I'll definitely make the relay team, but I really don't want to lose to the track and field club guys~ (\"Hikaru\")",
+      "I'll probably just be the one taking the photos anyway. (Yoshiki)"
+    ]
+  },
+  "interaction_148": {
+    "trigger": "School Festival",
+    "answers": [
+      "The cultural festival at Kibogayama High is pretty fun, right? I can't wait~ (\"Hikaru\")",
+      "Last year was rough... I was forced to play a ghost in the haunted house for forever... (Yoshiki)"
+    ]
+  },
+  "interaction_149": {
+    "trigger": "Shichi-Go-San",
+    "answers": [
+      "Did you do Shichi-Go-San, Yoshi-san? (\"Hikaru\")",
+      "I did... something that doesn't suit me at all (Yoshi-san)",
+      "Hmm. I want to do it too. I mean, now that I think about it, I'm not even three years old yet. (\"Hikaru\")"
+    ]
+  },
+  "interaction_150": {
+    "trigger": "Marathon",
+    "answers": [
+      "My legs are beat from the marathon today, too~ (\"Hikaru\")"
+    ]
+  },
+  "interaction_151": {
+    "trigger": "How old are you?",
+    "answers": [
+      "I'm 17, and \"\"Hikaru\"\" is... 16. (Yoshiki)"
+    ]
+  },
+  "interaction_152": {
+    "trigger": "The two of us",
+    "answers": [
+      "We're both high school sophomores. (Yoshiki)"
+    ]
+  },
+  "interaction_153": {
+    "trigger": "Height",
+    "answers": [
+      "I'm 165cm and Yoshiki's 175cm, but well, I plan on overtaking him soon anyway. (\"Hikaru\")"
+    ]
+  },
+  "interaction_154": {
+    "trigger": "Club activities",
+    "answers": [
+      "After school, I'm usually in the study hall. I'm basically a ghost member of the photography club... (Yoshiki)",
+      "I'm practicing with the soccer club—and then I'll head home with Yoshiki when I'm done. (\"Hikaru\")"
+    ]
+  },
+  "interaction_155": {
+    "trigger": "Friend",
+    "answers": [
+      "I've got plenty of friends, but Yoshi-san is already kind of like family to me, right? (\"Hikaru\")",
+      "Well... you're right. That's how it was (Yoshiki)"
+    ]
+  },
+  "interaction_156": {
+    "trigger": "Family",
+    "answers": [
+      "...It's not like there's any particular problem, but I just want to leave the house as soon as possible. (Yoshiki)"
+    ]
+  },
+  "interaction_157": {
+    "trigger": "Her",
+    "answers": [
+      "...Do you want a girlfriend, Yoshiki? (\"Hikaru\")",
+      "… (Yoshiki)",
+      "He's gone silent again! (\"Hikaru\")"
+    ]
+  },
+  "interaction_158": {
+    "trigger": "Birthday",
+    "answers": [
+      "April 20th (Yoshiki)",
+      "Apparently it's March 20th (\"Hikaru\")"
+    ]
+  },
+  "interaction_159": {
+    "trigger": "Bangs",
+    "answers": [
+      "Absolutely",
+      "No way.",
+      "img_159"
+    ]
+  },
+  "interaction_160": {
+    "trigger": "Hair",
+    "answers": [
+      "Hey, aren't you gonna cut your bangs? (\"Hikaru\")",
+      "Shut up, I'm not hanging up (Yoshiki)",
+      "You're so stubborn lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_161": {
+    "trigger": "Clothes",
+    "answers": [
+      "I like the school uniform the best. Besides that, I've only got the stuff my mom bought me... (Yoshiki)"
+    ]
+  },
+  "interaction_162": {
+    "trigger": "T-shirt",
+    "answers": [
+      "Yoshiki, why are your T-shirts always so frumpy? (\"Hikaru\")",
+      "My mom bought all of this at Mion. (Yoshiki)"
+    ]
+  },
+  "interaction_163": {
+    "trigger": "Favorite food",
+    "answers": [
+      "I like watermelon and pretty much all kinds of sweets~ (\"Hikaru\")",
+      "Eh... what is it, pickled plums...? I like anything as long as it's not something sweet. (Yoshiki)"
+    ]
+  },
+  "interaction_164": {
+    "trigger": "Ketta",
+    "answers": [
+      "Why do my sneakers always break so fast? (\"Hikaru\")",
+      "You're being too rough with me! (Yoshiki)"
+    ]
+  },
+  "interaction_165": {
+    "trigger": "Insomnia",
+    "answers": [
+      "Same as me. (Yoshiki)"
+    ]
+  },
+  "interaction_166": {
+    "trigger": "Gloomy",
+    "answers": [
+      "I'm fine, really... (Yoshiki)"
+    ]
+  },
+  "interaction_167": {
+    "trigger": "Stomach medicine",
+    "answers": [
+      "I've got a sensitive stomach, so I always carry some. (Yoshiki)"
+    ]
+  },
+  "interaction_168": {
+    "trigger": "Ghost",
+    "answers": [
+      "Yoshiki, you're good at tests of courage, right? (\"Hikaru\")",
+      "You're probably better at it than I am now. (Yoshiki)"
+    ]
+  },
+  "interaction_169": {
+    "trigger": "Ghost",
+    "answers": [
+      "It's not scary at all... right now. (\"Hikaru\")"
+    ]
+  },
+  "interaction_170": {
+    "trigger": "It's a secret",
+    "answers": [
+      "What are you gonna do with that information? (\"Hikaru\")"
+    ]
+  },
+  "interaction_171": {
+    "trigger": "Movie",
+    "answers": [
+      "I actually quite like watching movies. (\"Hikaru\")"
+    ]
+  },
+  "interaction_172": {
+    "trigger": "Torture",
+    "answers": [
+      "Your intonation is off. (Yoshiki)"
+    ]
+  },
+  "interaction_173": {
+    "trigger": "Mole",
+    "answers": [
+      "I'm self-conscious about it, so try not to look too much. (Yoshiki)"
+    ]
+  },
+  "interaction_174": {
+    "trigger": "School",
+    "answers": [
+      "Anyway, it's way too far from home! (\"Hikaru\")"
+    ]
+  },
+  "interaction_175": {
+    "trigger": "Middle school",
+    "answers": [
+      "Middle school was combined with Udekari next door, and it was located pretty far from Kubitachi. Asako and Yuuki went to the same middle school. (Yoshiki)"
+    ]
+  },
+  "interaction_176": {
+    "trigger": "Animal",
+    "answers": [
+      "I like insects, cats, dogs, and birds. Though I couldn't actually keep any as pets... (Yoshiki)"
+    ]
+  },
+  "interaction_177": {
+    "trigger": "Bird",
+    "answers": [
+      "Huh?",
+      "Ah...",
+      "img_177"
+    ]
+  },
+  "interaction_178": {
+    "trigger": "Dog",
+    "answers": [
+      "Every New Year's Eve, I used to go to my mother's side of the family's place in Tokyo. The lock screen on my phone is a dog they have there. (Yoshiki)"
+    ]
+  },
+  "interaction_179": {
+    "trigger": "Cicadas",
+    "answers": [
+      "I heard those things buzzing all the time are called cicadas (\"Hikaru\")"
+    ]
+  },
+  "interaction_180": {
+    "trigger": "Frog",
+    "answers": [
+      "The countryside isn't exactly quiet. (Yoshiki)"
+    ]
+  },
+  "interaction_181": {
+    "trigger": "Halloween",
+    "answers": [
+      "If I were to dress up for Halloween, I'd definitely be a zombie! Ahahaha! (\"Hikaru\")",
+      "I can't laugh... (Yoshiki)"
+    ]
+  },
+  "interaction_182": {
+    "trigger": "Christmas",
+    "answers": [
+      "Hey, when did you realize that Santa doesn't actually exist? (\"Hikaru\")",
+      "I've had a sneaking suspicion since I was about five. (Yoshiki)",
+      "Yoshiki was always such a realistic kid... (\"Hikaru\")"
+    ]
+  },
+  "interaction_183": {
+    "trigger": "Memories",
+    "answers": [
+      "The summer festival was really memorable~ But honestly, the minced meat cutlet might be my favorite memory lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_184": {
+    "trigger": "Student ID",
+    "answers": [
+      "Yoshiki's student ID looks like he's got such a gloomy face, lol (\"Hikaru\")",
+      "Stop looking at me without permission... (Yoshiki)"
+    ]
+  },
+  "interaction_185": {
+    "trigger": "What are you doing?",
+    "answers": [
+      "I was studying (Yoshiki)",
+      "Studying? Gross... (\"Hikaru\")"
+    ]
+  },
+  "interaction_186": {
+    "trigger": "What do you want to do?",
+    "answers": [
+      "I've just been watching YouTube this whole time... (Yoshiki)",
+      "Reading the manga I borrowed from Yoshiki... playing games... and helping out Okayan. (\"Hikaru\")"
+    ]
+  },
+  "interaction_187": {
+    "trigger": "Say something",
+    "answers": [
+      "Hmm, then I'll imitate Yoshiki! \"Stop it~! Don't touch my bangs!! Ahee!\" (\"Hikaru\")",
+      "I don't remember saying anything like that at all... (Yoshiki)"
+    ]
+  },
+  "interaction_188": {
+    "trigger": "Who do you like?",
+    "answers": [
+      "What do you mean by \"like\"? I don't really get it, but I guess my favorite living thing is Yoshiki. (\"Hikaru\")",
+      "I'm entitled to the right to remain silent, right? (Yoshiki)"
+    ]
+  },
+  "interaction_189": {
+    "trigger": "Do you like me?",
+    "answers": [
+      "Eh? Not really. (\"Hikaru\")",
+      "It's not that I hate it (Yoshiki)"
+    ]
+  },
+  "interaction_190": {
+    "trigger": "Where do you want to go?",
+    "answers": [
+      "I want to try going to the ocean! I want to see it for real! (\"Hikaru\")",
+      "...I hope I can go there someday (Yoshiki)"
+    ]
+  },
+  "interaction_191": {
+    "trigger": "Sing for me",
+    "answers": [
+      "Blue~ mountains~ towering high, Mount Tenban~♪ (\"Hikaru\")",
+      "That's the school song. (Yoshiki)"
+    ]
+  },
+  "interaction_192": {
+    "trigger": "Are you okay?",
+    "answers": [
+      "I'm totally fine though (\"Hikaru\")"
+    ]
+  },
+  "interaction_193": {
+    "trigger": "Press the stamp",
+    "answers": [
+      "Stay energetic today too!",
+      "Labor-nyan♪",
+      "img_193"
+    ]
+  },
+  "interaction_194": {
+    "trigger": "Say \"Kurokuma\" ten times",
+    "answers": [
+      "No way, I'm not falling for it again! lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_195": {
+    "trigger": "You ain't \"Hikaru\", are ya?",
+    "answers": [
+      "Eh?",
+      "...",
+      "img_195_1",
+      "img_195_2"
+    ]
+  },
+  "interaction_196": {
+    "trigger": "Volume 2",
+    "answers": [
+      "Volume 2 of \"The Summer \"Hikaru\" Died\" is now on sale! (\"Hikaru\") I heard the first-press bonus includes Yoshiki's student ID lol (\"Hikaru\")"
+    ]
+  },
+  "interaction_197": {
+    "trigger": "Serialization",
+    "answers": [
+      "Apparently it's being serialized in Young Ace UP... (Yoshiki)"
+    ]
+  },
+  "interaction_198": {
+    "trigger": "Comic",
+    "answers": [
+      "It's being posted on the Ace Comic Channel ( https://youtu.be/ Ws91h1gz7e8 ) (Yoshiki)"
+    ]
+  },
+  "interaction_199": {
+    "trigger": "Voice",
+    "answers": [
+      "If you scan the QR code on the transit ads, you can get early access to a voice drama specially recorded for the station! (\"Hikaru\")"
+    ]
+  },
+  "interaction_200": {
+    "trigger": "Update",
+    "answers": [
+      "Apparently it updates on Tuesdays! What's that about? (\"Hikaru\")"
+    ]
+  },
+  "interaction_108": {
+    "trigger": "Ku",
+    "answers": [
+      "Hieee... I'm traumatized. (Yoshiki)"
+    ]
+  }
+}
