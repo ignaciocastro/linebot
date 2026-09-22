@@ -284,9 +284,11 @@ def preview_html(short, lang, trigger, answers):
 <meta name="twitter:image" content="{img_url}">
 <meta name="theme-color" content="#7195bd">
 <script>window.location.replace({json.dumps(target)});</script>
-<style>body{{margin:0;display:flex;align-items:center;justify-content:center;height:100vh;background:#7195bd;color:#fff;font-family:sans-serif}}a{{color:#fff}}</style>
+<style>html,body{{margin:0;padding:0;background:#7195bd}}#fb{{display:none;align-items:center;justify-content:center;height:100vh;color:#fff;font-family:sans-serif}}#fb a{{color:#fff}}</style>
 </head>
-<body><p><a href="{target}">Open in HGSN Line Bot</a></p></body>
+<body><p id="fb"><a href="{target}">Open in HGSN Line Bot</a></p><noscript><p style="display:flex;align-items:center;justify-content:center;height:100vh;color:#fff;font-family:sans-serif"><a style="color:#fff" href="{target}">Open in HGSN Line Bot</a></p></noscript>
+<script>setTimeout(function(){{var el=document.getElementById('fb');if(el)el.style.display='flex';}},2500);</script>
+</body>
 </html>
 """
 

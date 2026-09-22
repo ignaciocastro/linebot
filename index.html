@@ -313,7 +313,14 @@
   }
 
   function buildShareUrl(shortId){
-    return window.location.origin + '/m/' + encodeURIComponent(String(shortId)) + '/' + currentLang + '.html';
+    const url = new URL(window.location.href);
+    url.pathname = '/';
+    url.searchParams.delete('lang');
+    url.searchParams.delete('m');
+    url.searchParams.set('lang', currentLang);
+    url.searchParams.set('m', String(shortId));
+    url.hash = '';
+    return url.toString();
   }
 
   function syncLangToUrl(){
