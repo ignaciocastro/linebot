@@ -281,6 +281,7 @@
 
   function protectNames(str){
     return str.replace(/([ 　]?)([（(])([^）)]+)([）)])/g, (m, sp, open, name, close) => {
+      if (name.length > 12) return m;
       return sp + '<span style="white-space:nowrap">' + open + name + close + '</span>';
     });
   }
