@@ -898,9 +898,9 @@
     ]
   },
   "interaction_142": {
-    "trigger": "\"Hikaru\" has been texting me 24/7, both now and back then... (Yoshiki)",
+    "trigger": "LINE",
     "answers": [
-      "Huh? Is there something wrong with that? I'm bored, so it's fine, right? (\"Hikaru\")",
+      "\"Hikaru\" has been texting me 24/7, both now and back then... (Yoshiki)",
       "Huh? Is there something wrong with that? I'm bored, so it's fine, right? (\"Hikaru\")"
     ]
   },
